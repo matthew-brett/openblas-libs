@@ -2,7 +2,7 @@ env:
     global:
         # The archive that gets built has name from ``git describe`` on this
         # commit.
-        - BUILD_COMMIT=349b722d8d09303
+        - BUILD_COMMIT=0.3.10
         - REPO_DIR=OpenBLAS
         # Following generated with:
         # travis encrypt -r MacPython/openblas-libs OPENBLAS_LIBS_STAGING_UPLOAD_TOKEN=<secret token value>
@@ -23,83 +23,83 @@ services: docker
 
 matrix:
   include:
-    - os: linux
-      env:
-        - PLAT=x86_64
-    - os: linux
-      env:
-        - PLAT=i686
-    - os: osx
-      language: objective-c
-      env:
-        - PLAT=x86_64
-    - os: osx
-      language: objective-c
-      env:
-        - PLAT=i686
-    - os: linux
-      env:
-        - PLAT=x86_64
-        - INTERFACE64=1
-    - os: osx
-      language: objective-c
-      env:
-        - PLAT=x86_64
-        - INTERFACE64=1
-    - os: linux
-      arch: arm64
-      env:
-        - PLAT=aarch64
-        - MB_ML_VER=2014
-        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
-    - os: linux
-      arch: arm64
-      env:
-        - PLAT=aarch64
-        - INTERFACE64=1
-        - MB_ML_VER=2014
-        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
-    - os: linux
-      arch: s390x
-      env:
-        - PLAT=s390x
-        - MB_ML_VER=2014
-        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
-    - os: linux
-      arch: s390x
-      env:
-        - PLAT=s390x
-        - INTERFACE64=1
-        - MB_ML_VER=2014
-        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
-    - os: linux
-      arch: ppc64le
-      env:
-        - PLAT=ppc64le
-        - MB_ML_VER=2014
-        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
-    - os: linux
-      arch: ppc64le
-      env:
-        - PLAT=ppc64le
-        - INTERFACE64=1
-        - MB_ML_VER=2014
-        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
-    # linux manylinux2010
-    - os: linux
-      env:
-        - PLAT=x86_64
-        - MB_ML_VER=2010
-    - os: linux
-      env:
-        - PLAT=i686
-        - MB_ML_VER=2010
-    - os: linux
-      env:
-        - PLAT=x86_64
-        - INTERFACE64=1
-        - MB_ML_VER=2010
-
+#    - os: linux
+#      env:
+#        - PLAT=x86_64
+#    - os: linux
+#      env:
+#        - PLAT=i686
+#    - os: osx
+#      language: objective-c
+#      env:
+#        - PLAT=x86_64
+#    - os: osx
+#      language: objective-c
+#      env:
+#        - PLAT=i686
+#    - os: linux
+#      env:
+#        - PLAT=x86_64
+#        - INTERFACE64=1
+#    - os: osx
+#      language: objective-c
+#      env:
+#        - PLAT=x86_64
+#        - INTERFACE64=1
+#    - os: linux
+#      arch: arm64
+#      env:
+#        - PLAT=aarch64
+#        - MB_ML_VER=2014
+#        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
+#    - os: linux
+#      arch: arm64
+#      env:
+#        - PLAT=aarch64
+#        - INTERFACE64=1
+#        - MB_ML_VER=2014
+#        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
+#    - os: linux
+#      arch: s390x
+#      env:
+#        - PLAT=s390x
+#        - MB_ML_VER=2014
+#        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
+#    - os: linux
+#      arch: s390x
+#      env:
+#        - PLAT=s390x
+#        - INTERFACE64=1
+#        - MB_ML_VER=2014
+#        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
+#    - os: linux
+#      arch: ppc64le
+#      env:
+#        - PLAT=ppc64le
+#        - MB_ML_VER=2014
+#        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
+#    - os: linux
+#      arch: ppc64le
+#      env:
+#        - PLAT=ppc64le
+#        - INTERFACE64=1
+#        - MB_ML_VER=2014
+#        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
+#    # linux manylinux2010
+#    - os: linux
+#      env:
+#        - PLAT=x86_64
+#        - MB_ML_VER=2010
+#    - os: linux
+#      env:
+#        - PLAT=i686
+#        - MB_ML_VER=2010
+#    - os: linux
+#      env:
+#        - PLAT=x86_64
+#        - INTERFACE64=1
+#        - MB_ML_VER=2010
+#
     # linux manylinux2014
     - os: linux
       env:
